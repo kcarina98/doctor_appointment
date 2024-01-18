@@ -1,0 +1,24 @@
+.buttondiv {
+  padding: 3px 1px;
+  display: block;
+  width: 90%;
+  margin: 5% auto 0 auto;
+  border-radius: 20px 20px 0 0;
+}
+
+.buttondiv button {
+  font-size: 1rem;
+  background-color: #b8b9c7;
+  color: white;
+  font-weight: 600;
+  padding: 10px 0;
+  width: 50%;
+  border: none;
+  border-radius: 20px 20px 0 0;
+  margin: 0 0 -3px 0;
+}
+
+#black {
+  background-color: #6b779a12;
+  color: #3e64ff;
+}

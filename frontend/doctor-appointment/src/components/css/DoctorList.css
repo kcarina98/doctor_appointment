@@ -1,0 +1,36 @@
+.list {
+  min-height: 100vh;
+}
+
+.list h1 {
+  color: #3e64ff;
+  text-align: center;
+  padding: 5%;
+}
+
+.doctor-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 5%;
+  gap: 10px;
+}
+
+.singleDoctor {
+  border-radius: 20px;
+  background-color: white;
+  padding: 5%;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  box-shadow: 0 0 10px lightgrey;
+}
+
+.singleDoctor:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+.doctor-image {
+  width: 100%;
+  height: 60%;
+}

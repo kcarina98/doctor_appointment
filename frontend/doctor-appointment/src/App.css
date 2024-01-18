@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.dark {
+  background-color: black;
+  color: white;
+}
+
+.adddoc {
+  background-color: #3e64ff;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  text-decoration: none;
+  text-align: center;
+  padding: 5px 10px;
+  margin: 5% 10% 3% 50%;
+  display: block;
+}
+
+.landingpagediv {
+  width: 85%;
+  margin: 0 auto 20px auto;
+  padding: 30px 20px;
+  border-radius: 20px;
+  background-color: #6b779a12;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.landingpagediv a {
+  text-decoration: none;
+  border: 1px solid #3e64ff;
+  color: #3e64ff;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+}

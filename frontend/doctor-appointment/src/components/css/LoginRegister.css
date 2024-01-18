@@ -1,0 +1,36 @@
+.login-register {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-register-box {
+  border-radius: 0 0 20px 20;
+  padding: 20px;
+  width: 90%;
+  text-align: center;
+  background-color: #6b779a12;
+}
+
+.login-register-box label {
+  display: block;
+}
+
+.login-register-box input {
+  display: block;
+  width: 90%;
+  border-radius: 20px;
+  padding: 10px;
+  border: none;
+  text-align: center;
+  margin: 5px 0 10px 0;
+}
+
+.button {
+  background-color: #3e64ff;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 15px 0;
+  width: 90%;
+}
