@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import Loadingscreen from "./Loadingscreen";
+import "./css/Detailpage.css";
+import Navbar from "../components/Navbar";
 
 export default function DetailDoctor() {
-  const [detailDoc, setDetailDoc] = useState(null);
+  const [detailDoc, setDetailDoc] = useState([]);
   const { id } = useParams();
 
   useEffect(() => {
@@ -18,32 +20,46 @@ export default function DetailDoctor() {
     getDoc();
   }, []);
 
-  console.log("DetailDoc: ", detailDoc);
+  useEffect(() => {
+    fetch(import.meta.env.VITE_BACKEND + "/api/docs/" + id)
+      .then((response) => response.json())
+      .then((data) => setDetailDoc(data));
+  }, []);
 
   if (!detailDoc) return <Loadingscreen />;
   return (
     <>
-      <h1>Doctor</h1>
-      <section>
+      <Navbar />
+      <section className="detailpage">
         {detailDoc.image && (
-          <img
-            src={import.meta.env.VITE_BACKEND + "/" + detailDoc.image}
-            alt="Profilbild"
-          />
+          <div className="image-div">
+            <img
+              src={import.meta.env.VITE_BACKEND + "/" + detailDoc.image}
+              alt="Profilbild"
+            />
+          </div>
         )}
 
-        <div>
-          <h2>{detailDoc.name}</h2>
-          <p>{detailDoc.specification}</p>
+        <h2>{detailDoc.name}</h2>
+        <h3>{detailDoc.specification}</h3>
+        <div className="dreiboxen">
+          <p>1000+ Patienten</p>
           <p>{detailDoc.experience} Years Experience</p>
-          <p></p>
+          <p>4 ⭐️</p>
+        </div>
+
+        <div className="description">
           <p>About Doctor:</p>
           <p>{detailDoc.description}</p>
-          <div>
-            {/* <button onClick={deleteBoot}>BOOT LÖSCHEN</button>
-              <Link to={`/edit/${id}`}>BOOT BEARBEITEN</Link> */}
-            <Link to="/docs">zurück</Link>
-          </div>
+        </div>
+
+        <div>
+          <Link className="button" to="/booking">
+            Set Appointment
+          </Link>
+          <Link className="button" to="/docs">
+            zurück
+          </Link>
         </div>
       </section>
     </>

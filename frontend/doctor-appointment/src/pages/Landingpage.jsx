@@ -1,20 +1,22 @@
 import { Link } from "react-router-dom";
+import Navbar from "../components/Navbar";
 
 export default function Landingpage() {
   return (
-    <>
-      <Link className="adddoc" to="/login">
-        Add Doctor Profile
+    <section className="landingpage">
+      <Navbar />
+      <Link className="loginbutton button" to="/login">
+        Log In
       </Link>
-      <img src="./img/covid-19.png" alt="Bild" />
+      <img className="landingimg" src="./img/covid-19.png" alt="Bild" />
       <div className="landingpagediv">
         <p>Find your doctor</p>
         <Link to="/docs">➤</Link>
       </div>
-      <div className="landingpagediv">
+      <div className="landingpagediv2">
         <p>Speciality</p>
-        <Link to="/docs">➤</Link>
+        <Link to="/speciality">➤</Link>
       </div>
-    </>
+    </section>
   );
 }

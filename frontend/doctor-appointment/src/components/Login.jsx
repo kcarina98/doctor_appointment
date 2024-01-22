@@ -6,23 +6,18 @@ export default function Login() {
 
   async function login(e) {
     e.preventDefault();
-    const user = {
-      email: e.target.email,
-      password: e.target.password,
-    };
+    const form = new FormData(e.target);
     const response = await fetch(
       import.meta.env.VITE_BACKEND + "/api/auth/login",
       {
         method: "POST",
-        headers: {
-          "content-type": "application/json",
-        },
-        body: JSON.stringify(user),
         credentials: "include",
+        body: form,
       }
     );
     if (response.ok) {
       navigate("/appointments");
+      console.log("eingeloggt");
     }
   }
 

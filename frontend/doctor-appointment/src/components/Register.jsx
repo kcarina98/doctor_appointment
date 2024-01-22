@@ -4,7 +4,7 @@ export default function Register() {
   async function register(e) {
     e.preventDefault();
     const form = new FormData(e.target);
-    await fetch(import.meta.env.VITE_BACKEND + "/api/docs/", {
+    await fetch(import.meta.env.VITE_BACKEND + "/api/auth/register", {
       method: "POST",
       body: form,
     });
@@ -22,7 +22,7 @@ export default function Register() {
             <option value="Gynägologie">Gynägologie</option>
             <option value="HNO">HNO</option>
             <option value="Orthopädie">Orthopädie</option>
-            <option value="Zahnarzt">Hausarzt</option>
+            <option value="Zahnarzt">Zahnarzt</option>
           </select>
           <label htmlFor="">Experience in years</label>
           <input type="number" name="experience" />

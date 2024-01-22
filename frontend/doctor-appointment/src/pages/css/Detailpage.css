@@ -1,0 +1,63 @@
+.detailpage img {
+  border-radius: 100%;
+  width: 200px;
+  height: 200px;
+  margin: 20% auto 10% auto;
+  align-items: center;
+}
+
+.detailpage {
+  min-height: 100vh;
+}
+
+.image-div {
+  width: 200px;
+  margin: 0 auto;
+}
+
+.detailpage h3 {
+  text-align: center;
+  margin-bottom: 10%;
+}
+
+.detailpage h2 {
+  text-align: center;
+  margin-bottom: 5%;
+  font-size: 30px;
+}
+.description {
+  border-radius: 20px;
+  padding: 5%;
+  width: 85%;
+  box-shadow: 0 0 10px lightgray;
+  margin: 0 auto 5% auto;
+}
+
+.dreiboxen {
+  display: flex;
+  gap: 20px;
+  width: 85%;
+  margin: 0 auto 5% auto;
+}
+
+.dreiboxen p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  box-shadow: 0 0 10px lightgray;
+  text-align: center;
+  width: 30%;
+  height: 75px;
+}
+
+.dreiboxen p:nth-of-type(1) {
+  background-color: rgba(173, 216, 230, 0.405);
+}
+
+.dreiboxen p:nth-of-type(2) {
+  background-color: rgba(144, 238, 144, 0.3);
+}
+.dreiboxen p:nth-of-type(3) {
+  background-color: rgba(250, 250, 210, 0.64);
+}

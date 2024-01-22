@@ -1,6 +1,7 @@
 import SingleDoctor from "./SingleDoctor";
 import { useEffect, useState } from "react";
 import "./css/DoctorList.css";
+import Navbar from "./Navbar";
 
 export default function DoctorList() {
   const [doctors, setDoctors] = useState([]);
@@ -12,15 +13,14 @@ export default function DoctorList() {
       setDoctors(data);
     }
     getDocs();
-    console.log(doctors);
   }, []);
 
   return (
     <section className="list">
+      <Navbar />
       <h1>all doctors</h1>
       <section className="doctor-list">
-        {doctors?.map((newDoc) => {
-          console.log("NEw DOc: ", newDoc);
+        {doctors.map((newDoc) => {
           return <SingleDoctor newDoc={newDoc} key={newDoc._id} />;
         })}
       </section>

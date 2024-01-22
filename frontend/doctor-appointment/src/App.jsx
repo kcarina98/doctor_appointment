@@ -14,6 +14,11 @@ import Loadingscreen from "./pages/Loadingscreen.jsx";
 import Appointments from "./pages/Appointments.jsx";
 import Protector from "./pages/Protector.jsx";
 import SingleDoctor from "./components/SingleDoctor.jsx";
+import DetailDoctor from "./pages/DetailDoctor.jsx";
+import BookingAppointment from "./pages/BookingAppointment.jsx";
+import SpecialityList from "./components/SpecialityList.jsx";
+import Navbar from "./components/Navbar.jsx";
+import DocProfil from "./pages/DocProfil.jsx";
 
 function App() {
   const [theme, setTheme] = useState(false);
@@ -29,12 +34,15 @@ function App() {
                   <Route path="/" element={<Landingpage />} />
                   <Route path="/login" element={<LoginRegister />} />
                   <Route path="/docs" element={<DoctorList />} />
-                  <Route path="/:id" element={<SingleDoctor />} />
+                  <Route path="/:id" element={<DetailDoctor />} />
+                  <Route path="booking" element={<BookingAppointment />} />
+                  <Route path="/speciality" element={<SpecialityList />} />
                   //- Die Appointments Page wird vom Protector beschützt. Hier
                   //- wird erst der Token überprüft und sonst ggf. zum Login
                   //-Screen weitergeleitet
                   <Route element={<Protector />}>
                     <Route path="/appointments" element={<Appointments />} />
+                    <Route path="/profil" element={<DocProfil />} />
                   </Route>
                 </Routes>
               </BrowserRouter>

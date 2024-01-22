@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
 import { Navigate, Outlet } from "react-router-dom";
 import Loadingscreen from "./Loadingscreen";
+import { UserContext } from "../context/context";
 
 export default function Protector() {
   //- authorized = Token wurde im Backend geprüft und stimmt überein
   const [authorized, setAuthorized] = useState(false);
   const [loading, setLoading] = useState(true);
+  const [user, setUser] = useState(null);
 
   //- Abfrage ans Backend, ob Token stimmt
   useEffect(() => {
@@ -33,5 +35,9 @@ export default function Protector() {
     return <Loadingscreen />;
   }
   //* wenn Autorisierung klappt
-  return <Outlet />;
+  return (
+    <UserContext.Provider value={{ user }}>
+      <Outlet />
+    </UserContext.Provider>
+  );
 }
