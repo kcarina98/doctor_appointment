@@ -3,7 +3,6 @@ import { createHash, createToken, createSalt } from "./service.js";
 
 export async function login(req, res) {
   const user = await User.findOne({ email: req.body.email });
-  console.log("User: ", user);
   if (!user) return res.status(401).end();
   if (user.password !== createHash(req.body.password, user.salt))
     return res.status(401).end();
@@ -15,7 +14,7 @@ export async function login(req, res) {
   res
     .cookie("keks", token, {
       httpOnly: true,
-      // secure: true,
+      secure: true,
     })
     .json({ email: user.email });
 }

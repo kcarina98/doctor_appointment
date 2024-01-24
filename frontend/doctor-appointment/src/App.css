@@ -84,6 +84,7 @@ nav {
   height: 10%;
   border-top: 1px solid #3e64ff;
   background-color: #3e64ff;
+  z-index: 10;
 }
 
 nav a {

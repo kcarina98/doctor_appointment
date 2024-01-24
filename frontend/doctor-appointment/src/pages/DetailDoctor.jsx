@@ -54,7 +54,7 @@ export default function DetailDoctor() {
         </div>
 
         <div>
-          <Link className="button" to="/booking">
+          <Link className="button" to={`/booking/${id}`}>
             Set Appointment
           </Link>
           <Link className="button" to="/docs">
