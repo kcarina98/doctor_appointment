@@ -6,7 +6,7 @@ const oAuthClient = new google.auth.OAuth2(
   process.env.CLIENT_SECRET,
   process.env.REDIRECT_URI
 );
-oAuthClient.setCredentials({ refresh_token: REFRESH_TOKEN });
+oAuthClient.setCredentials({ refresh_token: process.env.REFRESH_TOKEN });
 
 export async function sendMailforAppointmentRequest() {
   try {
