@@ -7,8 +7,5 @@ VITE_BACKEND=http://localhost:9898
 MONGODB=mongodb+srv://doctor:doctorpassword@cluster0.zxid7gg.mongodb.net/doctorappointment?retryWrites=true&w=majority
 PORT=9898
 JWT_SECRET=1uZNo7gop2oFXILs
-CLIENT_ID=223660647984-4t6cbmq0p0qg0k77bmver32nc39n3prk.apps.googleusercontent.com
-CLIENT_SECRET=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
-REDIRECT_URI=https://developers.google.com/oauthplayground
-REFRESH_TOKEN=1//04XljNIuINL7WCgYIARAAGAQSNwF-L9IrKWA9ULubqzSiNol3ikY47kXyfdb45H_KZbWHSE48CKjnmhSwYsUYTGgbsmLTvD1bU0M
-MYMAIL=carinawerner25@gmail.com
+
+Mails schicken, geht nicht, da das ganze über meine Mail läuft und ich die Token ungerne hier reinschreiben möchte :)
